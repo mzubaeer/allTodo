@@ -1,0 +1,119 @@
+.notes {
+    margin-top: 30px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        &-title {
+            font-size: 22px;
+            font-weight: 400;
+            color: #323232;
+        }
+
+        &-btn {
+            background: linear-gradient(0deg, rgba(103, 80, 164, 0.11), rgba(103, 80, 164, 0.11)), #FFFBFE;
+            width: 120px;
+            height: 56px;
+            border-radius: 16px;
+            box-shadow: 0px 4px 8px 3px #00000026, 0px 1px 3px 0px #0000004D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            @include media(720) {
+                display: none;
+            }
+
+            & span {
+                font-size: 14px;
+                font-weight: 500;
+                color: #6750A4;
+            }
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+
+        @include media(1024) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media(720) {
+            grid-template-columns: 1fr;
+
+        }
+
+        &.active {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        background: linear-gradient(0deg, rgba(103, 80, 164, 0.05), rgba(103, 80, 164, 0.05)), #FFFBFE;
+        box-shadow: 0px 1px 2px 0px #0000004D, 0px 1px 3px 1px #00000026;
+        border-radius: 16px;
+        padding: 16px;
+
+        &-top {
+            @include media(1024) {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            &.between {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            &-title {
+                font-size: 16px;
+                font-weight: 500;
+                color: #1c1b1f;
+            }
+
+            &-date {
+                color: #CAC4D0;
+                font-size: 14px;
+                font-weight: 400;
+                margin-bottom: 16px;
+            }
+
+        }
+
+        &-text {
+            font-size: 14px;
+            font-weight: 400;
+            color: #49454f;
+            margin-bottom: 16px;
+        }
+
+        &-btns {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            &-btn {
+                padding: 12px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                & span {
+                    font-size: 14px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

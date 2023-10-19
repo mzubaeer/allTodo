@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    user-select: none;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+body{
+    min-width: 320px;
+    width: 100%;
+}
+
+// $red:#CF1B1B;
+// $redBg:#FFE1E1;
+// $greyBg: #F3EDF7;
+// $cardBg:#FFFBFE;
+// $black:#1C1B1F;
+// $lightBlack:#323232;
+// $purple:#6750A4;
+// $purpleBg: #E6DDFF;
+// $grey:#CAC4D0;
+// $cardDesc:#49454F;
+
+.container {
+    max-width: 1160px;
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.edit {
+    color: #6750A4;
+    transition: 0.3s linear;
+
+    &:hover {
+        background: #E6DDFF;
+    }
+}
+
+.del {
+    color: #CF1B1B;
+    transition: 0.3s linear;
+
+    &:hover {
+        background: #FFE1E1;
+    }
+}
+
+.addNote {
+    background: linear-gradient(0deg, rgba(103, 80, 164, 0.11), rgba(103, 80, 164, 0.11)), #FFFBFE;
+    border-radius: 16px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    box-shadow: 0px 4px 8px 3px #00000026, 0px 1px 3px 0px #0000004D;
+}
+
+
+@mixin media($size) {
+    @media screen and (max-width: #{$size}px) {
+        @content;
+    }
+}
